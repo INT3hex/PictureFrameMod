@@ -38,6 +38,22 @@ import init.sun8i.usb.rc
 /system/xbin/usb_modeswitch.sh
 /system/etc/dhcpcd/dhcpcd-hooks/95-configured
 /system/bin/lights_leds.sh
+
+### Einstiegspunkt in /system/bin/lights_leds.sh
+sh /data/user/hack/loop.sh &
+
+### Mutex für loop.sh
+/mnt/obb/loop.run
+
+### Netzwerkkonfig
+/data/user/0/com.allwinner.theatreplayer.album/shared_prefs/album.xml
+/data/misc/wifi/wpa_supplicant.conf
+
+### Busybox muss noch aktualisiert werden
+### DNS-Resolver muss aktualisiert werden
+### Android intents
+### logcat without XmppManager:    adb logcat XmppManager:S dalvikvm:S ActivityManager:V ContextImpl:S *:V
+### IR-Keyboardhandler https://stackoverflow.com/questions/40635790/how-to-write-event-handler-for-buttons-in-adb-shell (Thanks Diego)
 ```
 
 ### Patching - Hooking into lights_leds.sh
