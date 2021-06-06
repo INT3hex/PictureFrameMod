@@ -51,7 +51,7 @@ adb shell chmod 755 /system/bin/lights_leds.sh
 adb push resolv.conf /etc/resolv.conf
 
 adb push busybox-armv7lv1_31 /data/user/hack/busybox-armv7lv1_31
-adb shell chmod 755 /data/user/hack/loop.sh
+adb shell chmod 755 /data/user/hack/busybox-armv7lv1_31
 
 adb push loop.sh /data/user/hack/loop.sh
 adb shell chmod 755 /data/user/hack/loop.sh
